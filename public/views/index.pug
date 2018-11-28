@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(href='/css/bootstrap.css',type="text/css", rel='stylesheet')
+        link(href='/css/style.css',type="text/css", rel='stylesheet')
+        title Document
+    body
+        h1 Mon super chat
+        .container-fluid
+            .row.container-info
+                .col-3#nbreUsers Vous n'êtes pas connecté
+                .col-3#newUser Test
+                .col-3#name Nom
+            .row
+                input.col-6(type="text", name="pseudo",value="",placeholder="Enter a pseudo", id="pseudo")
+                button.col-6.btn.btn-primary(type="button", name="button", onclick ="setName()") Let me chat!
+                input.col-6(type="text", name="message",value="",size='50', placeholder='write here', id="message")
+                button.col-6.btn.btn-primary(type="button", name='submit', onclick='sendMessage()') Envoyer message
+    script(src="/js/bootstrap.min.js")
+    script(src="/socket.io/socket.io.js")
+    script(src="/js/script.js")
+        
+            

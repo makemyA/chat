@@ -1,0 +1,9 @@
+body {
+  font-size: 1.5rem;
+  background-color: white;
+  color: black; }
+  body .container-fluid .row.container-info .col-3 {
+    border: 1px solid black;
+    color: black;
+    font-size: 1rem;
+    margin: 10px; }
