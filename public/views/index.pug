@@ -15,10 +15,14 @@ html(lang="en")
                 .col-3#newUser Test
                 .col-3#name Nom
             .row
-                input.col-6(type="text", name="pseudo",value="",placeholder="Enter a pseudo", id="pseudo")
-                button.col-6.btn.btn-primary(type="button", name="button", onclick ="setName()") Let me chat!
-                input.col-6(type="text", name="message",value="",size='50', placeholder='write here', id="message")
-                button.col-6.btn.btn-primary(type="button", name='submit', onclick='sendMessage()') Envoyer message
+                form(id="form-pseudo", action="", method="post")
+                    input.col-6(type="text", name="pseudo",value="",placeholder="Enter a pseudo", id="pseudo")
+                    button.col-6.btn.btn-primary(type="submit", name="button") Let me chat!
+            .row
+                .col-12#boxMessage 
+                form(id="form-message", action="", method="post")
+                    input.col-6(type="text", name="message",value="",placeholder="Enter your message", id="message")
+                    button.col-6.btn.btn-primary(type="submit", name="button", onclick ="sendMessage()") Send!
     script(src="/js/bootstrap.min.js")
     script(src="/socket.io/socket.io.js")
     script(src="/js/script.js")
